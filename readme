@@ -1,0 +1,32 @@
+grep -iRI "ЧтоИскать" ГдеИскать
+adb shell dmesg > dmesg.log
+adb logcat *:E -> logcat.txt
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+rm -rf ~/Android/kernel/8.1/kernel-3.18.79/out
+mkdir ~/Android/kernel/8.1/kernel-3.18.79/out
+export ARCH=arm
+export SUBARCH=arm
+export CROSS_COMPILE=/home/nik-kst/Android/utility/gcc-linaro-6.4.1-2017.11-x86_64_arm-eabi/bin/arm-eabi-
+make clean
+make mrproper
+make O=out TARGET_ARCH=arm zc500tg_defconfig
+make -j4 O=out TARGET_ARCH=arm
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+rm -rf ~/Android/kernel/8.1/kernel-3.18.79/out
+mkdir ~/Android/kernel/8.1/kernel-3.18.79/out
+export ARCH=arm
+export SUBARCH=arm
+export CROSS_COMPILE=/home/nik-kst/Android/utility/gcc-linaro-6.4.1-2017.11-x86_64_arm-eabi/bin/arm-eabi-
+make clean
+make mrproper
+make O=out TARGET_ARCH=arm zc500tg_MC3410_defconfig
+make -j4 O=out TARGET_ARCH=arm
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+********************************************************************************************************
+***************************************** Kernel full working ******************************************
+********************************************************************************************************

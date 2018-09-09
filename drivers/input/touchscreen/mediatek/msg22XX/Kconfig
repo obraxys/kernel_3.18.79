@@ -1,0 +1,9 @@
+#
+# Touchscreen driver configuration
+#
+if TOUCHSCREEN_MTK_MSG22XX
+
+config MSG22XX_CONFIG
+	string "MSG22XX for Mediatek config"
+
+endif

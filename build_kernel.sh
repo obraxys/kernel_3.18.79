@@ -1,0 +1,2 @@
+make O=$TARGET ARCH=$ARCH CROSS_COMPILE=$CROSS_COMPILE -j4 2<&1 | tee build.log
+
